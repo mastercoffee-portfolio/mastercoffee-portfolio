@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  align-items: center;
+  .logo-container,
+  .nav-links,
+  .cart {
+    display: flex;
+  }
+
+  .logo-container {
+    flex: 1;
+  }
+  nav {
+    flex: 8;
+    .nav-links {
+      justify-content: space-around;
+      list-style: none;
+
+      .nav-link {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform 1s;
+
+        &:hover {
+          color: #666666;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .cart {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}

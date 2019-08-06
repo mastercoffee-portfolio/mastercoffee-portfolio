@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+  header {
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .cart {
+      display: none;
+    }
+  }
+  .presentation {
+    flex-direction: column;
+  }
+  .introduction {
+    text-align: center;
+    top: 50px;
+    position: relative;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .cta {
+    background-color: white;
+    flex-direction: column;
+    .cta-select {
+      margin: 10px;
+      left: -30px;
+      position: relative;
+    }
+  }
+
+  .pic-beans {
+    display: none;
+  }
+  .cover img {
+    margin-top: 100px;
+  }
+}

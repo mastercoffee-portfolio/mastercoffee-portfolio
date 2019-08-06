@@ -1,0 +1,151 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Alegreya Sans SC'; }
+
+header {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  align-items: center; }
+  header .logo-container,
+  header .nav-links,
+  header .cart {
+    display: flex; }
+  header .logo-container {
+    flex: 1; }
+  header nav {
+    flex: 8; }
+    header nav .nav-links {
+      justify-content: space-around;
+      list-style: none; }
+      header nav .nav-links .nav-link {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform 1s; }
+        header nav .nav-links .nav-link:hover {
+          color: #666666;
+          transform: scale(1.1); }
+  header .cart {
+    flex: 1;
+    justify-content: flex-end; }
+
+main {
+  margin-bottom: 20px; }
+  main .presentation {
+    display: flex;
+    width: 65%;
+    margin: auto;
+    min-height: 300px;
+    align-items: center; }
+    main .presentation .introduction {
+      background: #cccccc;
+      flex: 2; }
+      main .presentation .introduction .intro-text {
+        font-size: 44px;
+        font-weight: 500px;
+        background: linear-gradient(to right, #666666, #cccccc); }
+        main .presentation .introduction .intro-text h1,
+        main .presentation .introduction .intro-text p {
+          text-align: center; }
+      main .presentation .introduction .cta {
+        background: white;
+        padding: 50px 0px 0px 0px; }
+        main .presentation .introduction .cta .cta-select {
+          color: black;
+          width: 150px;
+          height: 50px;
+          cursor: pointer;
+          font-family: 'Alegreya Sans SC';
+          font-size: 24px;
+          border: none;
+          margin-left: 25%;
+          margin-top: 50px; }
+          main .presentation .introduction .cta .cta-select:hover {
+            background: linear-gradient(to right, black, #cccccc);
+            color: white; }
+        main .presentation .introduction .cta .cta-add {
+          color: black;
+          width: 150px;
+          height: 50px;
+          cursor: pointer;
+          font-family: 'Alegreya Sans SC';
+          font-size: 24px;
+          border: none; }
+          main .presentation .introduction .cta .cta-add:hover {
+            background: linear-gradient(to left, black, #cccccc);
+            color: white; }
+    main .presentation .cover {
+      flex: 1;
+      height: 600px; }
+      main .presentation .cover img {
+        height: 100%;
+        filter: drop-shadow(0px 5px 3px black);
+        animation: pic 5s ease-in-out; }
+  main .pic-beans {
+    position: absolute;
+    top: 70%;
+    left: 31%;
+    z-index: -1;
+    height: 20%;
+    animation: drop 5s ease infinite; }
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes pic {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+footer #footer .coffee-quote-footer {
+  background: #ffe6cc; }
+  footer #footer .coffee-quote-footer #coffee {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 36px;
+    margin: auto; }
+
+@media screen and (max-width: 1024px) {
+  header .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end; }
+  header .cart {
+    display: none; }
+  .presentation {
+    flex-direction: column; }
+  .introduction {
+    text-align: center;
+    top: 50px;
+    position: relative; }
+    .introduction h1 {
+      font-size: 30px; }
+    .introduction p {
+      font-size: 18px; }
+  .cta {
+    background-color: white;
+    flex-direction: column; }
+    .cta .cta-select {
+      margin: 10px;
+      left: -30px;
+      position: relative; }
+  .pic-beans {
+    display: none; }
+  .cover img {
+    margin-top: 100px; } }
